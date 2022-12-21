@@ -1,6 +1,6 @@
 # Portfolio
 
-This repository is a portfolio of projects I've completed for self learning and at Northeastern University.
+This repository is a portfolio of projects I've completed for self learning and as a some as an academic-requirement at Northeastern University and VelloreInstitute of Technology.
 
 ## Data Analysis with Python & SQL
 Clustering: Strategic New Fitness Centers in Los Angeles
