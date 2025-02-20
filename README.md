@@ -22,13 +22,6 @@ I am Hrithik Sarda, a Data Scientist & Engineer passionate about solving real-wo
 - 💡 Strong advocate for **LLMs, Deep Learning, and Recommendation Systems**
 - 🤝 Open to collaborations on **exciting AI projects**
 
-### 🔥 My Stats  
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=hrithiksarda&theme=highcontrast)](https://git.io/streak-stats)
-
-![Hrithik's GitHub stats](https://github-readme-stats.vercel.app/api?username=hrithiksarda&show_icons=true&theme=radical)
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hrithiksarda&layout=compact&theme=dracula&langs_count=6&hide_border=true&custom_title=Top%20Languages&title_color=FF69B4)](https://github.com/anuraghazra/github-readme-stats)
-
 ### 📂 Notable Projects
 
 #### 🏥 **Early Sepsis Prediction ML Pipeline**
