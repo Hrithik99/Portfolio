@@ -84,5 +84,5 @@ MIT License
 
 ## Contact
 
-For inquiries, please contact [Your Name] at [[your.email@example.com](mailto\:your.email@example.com)].
+For inquiries, please contact Hrithik Sarda at [[hrithiksarda4@gmail.com](mailto\:your.email@example.com)].
 
