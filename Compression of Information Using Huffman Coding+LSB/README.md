@@ -143,7 +143,7 @@ This project is released under the **MIT License**.
 
 ```
 MIT License
-Copyright (c) 2025 Your Name
+Copyright (c) 2025 Hrithik Sarda
 ```
 
 ---
