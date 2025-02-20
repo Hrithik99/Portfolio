@@ -152,8 +152,7 @@ Copyright (c) 2025 Your Name
 
 For any inquiries or contributions, feel free to reach out:
 
-📧 **Email**: [your.email@example.com](mailto:your.email@example.com)  
-💻 **GitHub**: [github.com/yourusername](https://github.com/yourusername)  
+📧 **Email**: [hrithiksarda4@gmai.com](mailto:your.email@example.com) 
 
 ---
 
