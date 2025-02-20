@@ -53,3 +53,79 @@ The Arduino processes these readings and controls the servo motors to orient the
 
 Here's a snippet of the Arduino code that controls the solar tracker:
 
+#include <Servo.h>
+
+// Define Servo objects
+Servo servohori;  // Horizontal servo
+Servo servoverti; // Vertical servo
+
+// Servo position variables
+int servoh = 0;
+int servov = 0;
+
+// Servo angle limits
+int servohLimitHigh = 160;
+int servohLimitLow = 20;
+int servovLimitHigh = 160;
+int servovLimitLow = 20;
+
+// LDR pin assignments
+int ldrtopl = 2; // Top left LDR (green wire)
+int ldrtopr = 1; // Top right LDR (yellow wire)
+int ldrbotl = 3; // Bottom left LDR (blue wire)
+int ldrbotr = 0; // Bottom right LDR (orange wire)
+
+void setup() {
+  // Attach and initialize servos
+  servohori.attach(10);
+  servohori.write(0);
+  servoverti.attach(9);
+  servoverti.write(0);
+  delay(500);
+}
+
+void loop() {
+  // Read current servo positions
+  servoh = servohori.read();
+  servov = servoverti.read();
+
+  // Read LDR values
+  int topl = analogRead(ldrtopl);
+  int topr = analogRead(ldrtopr);
+  int botl = analogRead(ldrbotl);
+  int botr = analogRead(ldrbotr);
+
+  // Calculate averages
+  int avgtop = (topl + topr) / 2;   // Average of top LDRs
+  int avgbot = (botl + botr) / 2;   // Average of bottom LDRs
+  int avgleft = (topl + botl) / 2;  // Average of left LDRs
+  int avgright = (topr + botr) / 2; // Average of right LDRs
+
+  // Adjust vertical position
+  if (avgtop < avgbot) {
+    servoverti.write(constrain(servov + 1, servovLimitLow, servovLimitHigh));
+  } else if (avgbot < avgtop) {
+    servoverti.write(constrain(servov - 1, servovLimitLow, servovLimitHigh));
+  } else {
+    servoverti.write(servov);
+  }
+
+  // Adjust horizontal position
+  if (avgleft > avgright) {
+    servohori.write(constrain(servoh + 1, servohLimitLow, servohLimitHigh));
+  } else if (avgright > avgleft) {
+    servohori.write(constrain(servoh - 1, servohLimitLow, servohLimitHigh));
+  } else {
+    servohori.write(servoh);
+  }
+
+  delay(50); // Small delay to prevent rapid movements
+}
+
+
+
+## Conclusion
+
+The Arduino Solar Tracker project showcases an effective way to maximize solar energy capture using readily available components and Arduino technology. By automatically aligning solar panels with the sun's position, this system can significantly improve the efficiency of solar power installations.
+
+
